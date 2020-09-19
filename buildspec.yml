@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       python: 3.7
-  pre-build:
+  pre_build:
     commands:
       - echo starting sam package/deploy...
   build:
