@@ -12,7 +12,7 @@ phases:
       - sam package --template-file template.yaml --s3-bucket salesforce-cti-adapter --output-template-file packaged-template.yml
       - echo sam package is ready...
       - echo starting sam deploy...
-      - sam deploy --template-file /codebuild/output/src826705619/src/github.com/utkankuzu/amazon-connect-salesforce-lambda/packaged-template.yml --stack-name salesforce-cti-adapter
+      - sam deploy --template-file packaged-template.yml --stack-name salesforce-cti-adapter --region us-east-1
   post_build:
     commands:
       - echo deployment completed on `date`
