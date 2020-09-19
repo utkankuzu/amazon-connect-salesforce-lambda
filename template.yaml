@@ -222,7 +222,7 @@ Resources:
     Type: AWS::Serverless::LayerVersion
     Properties:
       Description: Salesforce Lambda function external dependencies
-      ContentUri: ../lambda_layers
+      ContentUri: ./sam-app/lambda_layers
       CompatibleRuntimes:
         - python3.7
 
