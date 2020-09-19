@@ -3,9 +3,18 @@ phases:
   install:
     runtime-versions:
       python: 3.7
+    commands:
+      - echo starting sam package/deploy...
   build:
     commands:
+      - echo starting sam package...
       - sam package --template-file template.yaml --s3-bucket salesforce-cti-adapter --output-template-file packaged-template.yml
+      - echo sam package is ready...
+      - echo starting sam deploy...
+      - sam deploy --template-file /codebuild/output/src826705619/src/github.com/utkankuzu/amazon-connect-salesforce-lambda/packaged-template.yml --stack-name salesforce-cti-adapter
+  pos_build:
+    commands:
+      - echo deployment completed on `date`
 artifacts:
   files:
     - packaged-template.yml
