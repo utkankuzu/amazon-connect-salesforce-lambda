@@ -118,7 +118,7 @@ Parameters:
       - ERROR
       - CRITICAL
   PostcallRecordingImportEnabled:
-    Default: true
+    Default: false
     Description: Set to false if importing call recordings into Salesforce should not be enabled on the package level.
     Type: String
     AllowedPattern: ^(true|false)$
@@ -126,7 +126,7 @@ Parameters:
       - true
       - false
   PostcallTranscribeEnabled:
-    Default: true
+    Default: false
     Description: Set to false if post-call transcription should not be enabled on the package level.
     Type: String
     AllowedPattern: ^(true|false)$
@@ -134,7 +134,7 @@ Parameters:
       - true
       - false
   PostcallCTRImportEnabled:
-    Default: true
+    Default: false
     Description: Set to false if importing CTRs into Salesforce should not be enabled on the package level.
     Type: String
     AllowedPattern: ^(true|false)$
@@ -142,7 +142,7 @@ Parameters:
       - true
       - false
   HistoricalReportingImportEnabled:
-    Default: true
+    Default: false
     Description: Set to false if importing Historical Reporting into Salesforce should not be enabled.
     Type: String
     AllowedPattern: ^(true|false)$
@@ -150,7 +150,7 @@ Parameters:
       - true
       - false
   RealtimeReportingImportEnabled:
-    Default: true
+    Default: false
     Description: Set to false if importing Realtime Reporting into Salesforce should not be enabled.
     Type: String
     AllowedPattern: ^(true|false)$
